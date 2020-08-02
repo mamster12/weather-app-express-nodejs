@@ -47,7 +47,11 @@ const weatherForecast = (lat, lon, callback) => {
 
     request(
         realtime,
-        (error, { statusCode }, { message, weather_code, temp }) => {
+        (
+            error,
+            { statusCode },
+            { message, weather_code, temp, wind_speed, wind_gust }
+        ) => {
             if (error) {
                 callback(
                     'Unable to connect to the weather services server. Please check your internet.'
@@ -67,7 +71,8 @@ const weatherForecast = (lat, lon, callback) => {
                             ', '
                         )}. It is currently ${
                             temp.value
-                        } degrees out. There is a ${data_precip} % chance of rain today.`
+                        } degrees out. There is a ${data_precip} % chance of rain today.
+Wind speed is at ${wind_speed.value}m/s and gustiness of ${wind_gust.value}m/s.`
                     );
                 });
             }

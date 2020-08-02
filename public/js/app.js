@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 forecast.innerHTML = `<p>${data.error}</p>`;
             } else {
-                forecast.innerHTML = `<p>${data.location}</p><p>${data.forecast}</p>`;
+                forecast.innerHTML = `<p>${data.location}</p><p style="white-space: pre-wrap;">${data.forecast}</p>`;
             }
         });
     });
