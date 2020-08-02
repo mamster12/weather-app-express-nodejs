@@ -8,6 +8,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const location = searchName.value;
+    forecast.classList.add('padded');
     forecast.innerHTML = '<p>Loading...</p>';
 
     fetch(`/weather?address=${location}`).then((response) => {

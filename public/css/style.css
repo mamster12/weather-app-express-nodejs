@@ -70,3 +70,17 @@ button:hover {
 button:focus {
     outline: none;
 }
+
+.forecast {
+    background: #f8f8f8;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.forecast p {
+    margin: 0;
+}
+
+.padded {
+    padding: 8px;
+}
